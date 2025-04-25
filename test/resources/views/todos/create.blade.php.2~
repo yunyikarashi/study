@@ -1,0 +1,10 @@
+@extends('layout')
+
+@section('content')
+<h1>ToDoì¬</h1>
+<form method="POST" action="{{ route('todos.store') }}">
+  @csrf
+  <input type="text" name="title" placeholder="ƒ^ƒCƒgƒ‹">
+  <button type="submit">’Ç‰Á</button>
+</form>
+@endsection

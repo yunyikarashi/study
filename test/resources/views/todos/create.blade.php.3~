@@ -1,0 +1,9 @@
+﻿@extends('layout')
+@section('content')
+<h1>ToDo쐬</h1>
+<form method="POST" action="{{ route('todos.store') }}">
+  @csrf
+  <input type="text" name="title" placeholder="^Cg">
+  <button type="submit">ǉ|/button>
+</form>
+@endsection
