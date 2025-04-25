@@ -1,0 +1,19 @@
+@extends('layout')
+
+@section('content')
+<h1>ToDoˆê——</h1>
+<a href="{{ route('todos.create') }}">’Ç‰Á</a>
+<ul>
+  @foreach ($todos as $todo)
+    <li>
+      {{ $todo->title }} - {{ $todo->completed ? '??' : '??' }}
+      <a href="{{ route('todos.edit', $todo) }}">•ÒW</a>
+      <form action="{{ route('todos.destroy', $todo) }}" method="POST" style="display:inline;">
+        @csrf
+        @method('DELETE')
+        <button type="submit">íœ</button>
+      </form>
+    </li>
+  @endforeach
+</ul>
+@endsection
